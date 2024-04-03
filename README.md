@@ -37,6 +37,7 @@ Containers:
 
 ## TL;DR: Steps
 ```
+1. cp .env.sample .env
 ----- SSV -----
 1. under prometheus/prometheus.yml line 43, add you SSV operators
 1. under alertmanager/config.yml add your Pagerduty integration/service key
@@ -154,13 +155,26 @@ Trigger an alert if SSV, the Beacon, or Execution nodes are down.
     annotations:
       summary: "SSV <> ETH Execution Node Down for instance: {{ $labels.instance }}"
   - alert: SSVOperatorDown
-    expr: (ssv_node_status + 1) <2 or (absent(ssv_node_status) * 0) < 2
+    expr: (ssv_node_status + 1) < 2 or (absent(ssv_node_status) * 0) < 2
     for: 5m
     labels:
       severity: critical
     annotations:
       summary: "SSV Operator Down for instance: {{ $labels.instance }}"
-
+  - alert: SSVLowPeers
+    expr: ssv_p2p_all_connected_peers < 10
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "SSV Operator Peers low for instance: {{ $labels.instance }}"
+  - alert: SSVLowPerformance
+    expr: sum(rate(ssv_validator_roles_failed{instance=~"$instance.*"}[5m])) > sum(rate(ssv_validator_roles_submitted{instance=~"$instance.*"}[5m]))
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "SSV Failed Submissions too high for instance: {{ $labels.instance }}"
 ```
 
 
