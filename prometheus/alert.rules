@@ -144,3 +144,10 @@ groups:
       severity: critical
     annotations:
       summary: "SSV Operator Down for instance: {{ $labels.instance }}"
+  - alert: SSVLowPeerse
+    expr: ssv_p2p_all_connected_peers < 10
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "SSV Operator Peers low for instance: {{ $labels.instance }}"
