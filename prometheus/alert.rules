@@ -138,7 +138,7 @@ groups:
     annotations:
       summary: "SSV <> ETH Execution Node Down for instance: {{ $labels.instance }}"
   - alert: SSVOperatorDown
-    expr: (ssv_node_status + 1) <2 or (absent(ssv_node_status) * 0) < 2
+    expr: (ssv_node_status + 1) < 2 or (absent(ssv_node_status) * 0) < 2
     for: 5m
     labels:
       severity: critical
