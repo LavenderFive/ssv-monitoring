@@ -40,7 +40,7 @@ Containers:
 1. cp .env.sample .env
 ----- SSV -----
 1. under prometheus/prometheus.yml line 43, add you SSV operators
-1. under alertmanager/config.yml add your Pagerduty integration/service key
+1. under alertmanager/config.yml line 12, add your Pagerduty APIv2 service key
 ----- Caddy ------
 1. under caddy/Caddyfile:
 1. replace YOUR_WEBSITE.COM with your website
