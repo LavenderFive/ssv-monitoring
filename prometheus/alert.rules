@@ -158,3 +158,10 @@ groups:
       severity: critical
     annotations:
       summary: "SSV Failed Submissions too high for instance: {{ $labels.instance }}"
+  - alert: SSVLowPerformance
+    expr: increase(ssv_validator_roles_failed{role="PROPOSER"}[5m]) > 1
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "SSV Failed Proposal Submission, likely config error for instance: {{ $labels.instance }}"
