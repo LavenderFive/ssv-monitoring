@@ -90,6 +90,11 @@ Grafana is preconfigured with dashboards and Prometheus as the default data sour
 * Url: [http://prometheus:9090](http://prometheus:9090)
 * Access: proxy
 
+***SSV Node Dashboard***
+
+![image4](https://github.com/LavenderFive/ssv-monitoring/assets/9121234/2ef7b653-0aec-457c-a676-eecc274c4cfe)
+
+
 ***Monitor Services Dashboard***
 
 ![Monitor Services](https://raw.githubusercontent.com/LavenderFive/ssv-monitoring/master/screens/Grafana_Prometheus.png)
