@@ -1,9 +1,8 @@
 # ssv-monitoring
 
 A monitoring solution for node runners and validators utilizing docker containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), 
-[NodeExporter](https://github.com/prometheus/node_exporter), and alerting with [AlertManager](https://github.com/prometheus/alertmanager). 
-
-This is intended to be a single-stop solution for monitoring your signing state for SSV. The dashboard utilize the official
+[NodeExporter](https://github.com/prometheus/node_exporter), and alerting with [AlertManager](https://github.com/prometheus/alertmanager). This is intended 
+to be a single-stop solution for monitoring your signing state for SSV. The dashboard utilize the official
 [SSV Monitoring dashboards](https://github.com/bloxapp/ssv/tree/main/monitoring/grafana)
 
 ## Install
