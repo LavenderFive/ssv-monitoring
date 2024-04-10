@@ -24,7 +24,7 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 2,
+    "id": 149,
     "links": [],
     "liveNow": false,
     "panels": [
@@ -214,7 +214,7 @@
                         "uid": "${datasource}"
                     },
                     "exemplar": false,
-                    "expr": "(ssv_node_status{instance=~\"$instance.*\"} + 1) or (absent(ssv_node_status{instance=~\"$instance.*\"}) * 0)",
+                    "expr": "(ssv_node_status{instance=~\"$instance.*\"} + 1) or (absent(ssv_node_status{instance=~\"$instance.*\"}) * 0) or (up{instance=~\"$instance.*\"} + 1)",
                     "hide": false,
                     "instant": true,
                     "interval": "",
@@ -1344,8 +1344,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "red",
-                                "value": null
+                                "color": "red"
                             },
                             {
                                 "color": "#EAB839",
@@ -1445,8 +1444,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             }
                         ]
                     },
@@ -1517,8 +1515,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "#ccccdc",
-                                "value": null
+                                "color": "#ccccdc"
                             }
                         ]
                     }
@@ -1552,8 +1549,7 @@
                                     "mode": "absolute",
                                     "steps": [
                                         {
-                                            "color": "#ccccdc",
-                                            "value": null
+                                            "color": "#ccccdc"
                                         },
                                         {
                                             "color": "#ccccdc",
@@ -1749,8 +1745,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -1830,8 +1825,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             }
                         ]
                     },
@@ -2200,8 +2194,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "#EAB839",
@@ -2352,8 +2345,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -2448,8 +2440,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -2521,8 +2512,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             }
                         ]
                     }
@@ -2718,8 +2708,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             }
                         ]
                     }
@@ -2863,8 +2852,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -2955,8 +2943,7 @@
                         "mode": "absolute",
                         "steps": [
                             {
-                                "color": "green",
-                                "value": null
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -3070,8 +3057,8 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "Node Dashboard",
+    "title": "SSV Node Dashboard",
     "uid": "node_dashboard",
-    "version": 2,
+    "version": 5,
     "weekStart": ""
 }
