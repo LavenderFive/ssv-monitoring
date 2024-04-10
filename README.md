@@ -114,7 +114,7 @@ The Monitor Services Dashboard shows key metrics for monitoring the containers t
 Two alert groups have been setup within the [alert.rules](https://github.com/LavenderFive/ssv-monitoring/blob/master/prometheus/alert.rules) configuration file:
 
 * Monitoring services alerts [targets](https://github.com/LavenderFive/ssv-monitoring/blob/master/prometheus/alert.rules#L13-L22)
-* Peggo alerts [peggo](https://github.com/LavenderFive/ssv-monitoring/blob/master/prometheus/alert.rules#L2-L11)
+* SSV alerts [ssv](https://github.com/LavenderFive/ssv-monitoring/blob/master/prometheus/alert.rules#L124-L175)
 
 You can modify the alert rules and reload them by making a HTTP POST call to Prometheus:
 
