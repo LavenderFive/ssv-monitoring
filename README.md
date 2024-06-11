@@ -12,7 +12,9 @@ Clone this repository on your Docker host, cd into ssv-monitoring directory and 
 ```bash
 git clone https://github.com/LavenderFive/ssv-monitoring
 cd ssv-monitoring
-
+cp .env.sample .env
+# under prometheus/prometheus.yml line 43, add your SSV operators
+# under alertmanager/config.yml line 12, add your Pagerduty APIv2 service key
 docker-compose up -d
 ```
 
@@ -38,7 +40,7 @@ Containers:
 ```
 1. cp .env.sample .env
 ----- SSV -----
-1. under prometheus/prometheus.yml line 43, add you SSV operators
+1. under prometheus/prometheus.yml line 43, add your SSV operators
 1. under alertmanager/config.yml line 12, add your Pagerduty APIv2 service key
 ----- Caddy ------
 1. under caddy/Caddyfile:
